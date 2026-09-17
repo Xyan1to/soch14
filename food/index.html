@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Организация питания в образовательной организации — МАОУ СОШ № 14 НГО</title>
+    <!-- Поднимаемся на уровень выше к папке css, так как этот файл лежит в подпапке /food/ -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .food-nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        .food-tab-link {
+            padding: 8px 16px;
+            background-color: #e9ecef;
+            color: #495057;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .food-tab-link.active {
+            background-color: #0056b3;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        .menu-table th, .menu-table td {
+            padding: 10px 12px;
+            border: 1px solid #dee2e6;
+            text-align: left;
+        }
+        .menu-table th {
+            background-color: #f1f3f5;
+            color: #002b5c;
+        }
+        .hot-line-box {
+            background-color: #fff9db;
+            border: 1px solid #ffe066;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта. Чтобы скрипт корректно работал из подпапки, мы передадим фикс путей, но наш текущий js/main.js рассчитан на корень. -->
+    <div id="header-component"></div>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <nav class="breadcrumbs" style="margin-bottom: 20px; font-size: 0.9rem; color: #6c757d;">
+                <a href="../index.html">Главная</a> — <span>Сведения об ОО</span> — <strong>Организация питания</strong>
+            </nav>
+
+            <h1>Организация питания в образовательной организации</h1>
+            <p style="margin-bottom: 30px; color: #6c757d;">Ежедневное меню, нормативно-правовые акты и условия организации горячего питания учащихся МАОУ «СОШ № 14» НГО.</p>
+
+            <!-- Навигационные вкладки внутри раздела (требование к удобству) -->
+            <div class="food-nav-tabs">
+                <a href="#daily-menu" class="food-tab-link active">Ежедневное меню (Мониторинг)</a>
+                <a href="#general-info" class="food-tab-link">Общая информация и график</a>
+                <a href="#control" class="food-tab-link">Родительский контроль</a>
+            </div>
+
+            <!-- БЛОК 1: Ежедневное меню для автоматического мониторинга -->
+            <section id="daily-menu" class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #002b5c; margin-bottom: 10px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">Ежедневное меню горячего питания</h2>
+                <p style="font-size: 0.9rem; color: #495057; margin-bottom: 15px;">В соответствии с требованиями Министерства просвещения РФ, ниже публикуются файлы ежедневных меню в формате xlsx для автоматического мониторинга.</p>
+                
+                <table class="menu-table">
+                    <thead>
+                        <tr>
+                            <th>Дата</th>
+                            <th>Наименование файла (формат Минпросвещения)</th>
+                            <th>Ссылка на скачивание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Сюда вручную добавляются строки при обновлении меню -->
+                        <tr>
+                            <td><strong>17.09.2026</strong></td>
+                            <td><code>2026-09-17-xlsx.xlsx</code></td>
+                            <td><a href="2026-09-17-xlsx.xlsx" download>📥 Скачать меню (XLSX, 25 КБ)</a></td>
+                        </tr>
+                        <tr>
+                            <td>16.09.2026</td>
+                            <td><code>2026-09-16-xlsx.xlsx</code></td>
+                            <td><a href="2026-09-16-xlsx.xlsx" download>📥 Скачать меню (XLSX, 25 КБ)</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a href="https://foodmonitoring.ru" target="_blank" style="font-size: 0.9rem; font-style: italic;">🔗 Ссылка на Единый реестр мониторинга горячего питания</a></p>
+            </section>
+
+            <!-- БЛОК 2: Общая информация -->
+            <section id="general-info" class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #002b5c; margin-bottom: 10px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">Общая информация об условиях питания</h2>
+                <p>Поставка продуктов питания и организация горячих завтраков/обедов в МАОУ «СОШ № 14» НГО осуществляется специализированным организатором питания на основании муниципального контракта.</p>
+                
+                <h3 style="margin-top: 15px; color: #002b5c;">График посещения столовой:</h3>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li><strong>После 1 урока (09:15 - 09:30):</strong> 1 – 4 классы (Завтрак)</li>
+                    <li><strong>После 2 урока (10:15 - 10:35):</strong> 5 – 8 классы (Завтрак)</li>
+                    <li><strong>После 3 урока (11:20 - 11:40):</strong> 9 – 11 классы (Завтрак / Обед)</li>
+                    <li><strong>После 4 урока (12:25 - 12:45):</strong> Обеды для групп продленного дня и льготных категорий</li>
+                </ul>
+            </section>
+
+            <!-- БЛОК 3: Горячая линия -->
+            <div class="hot-line-box">
+                <h3 style="color: #d9480f; margin-bottom: 5px;">📞 Горячая линия по вопросам питания</h3>
+                <p>Если у вас есть замечания или предложения по качеству питания в школе, вы можете обратиться к ответственному по питанию: <strong>[ФИО ответственного, телефон]</strong> или на федеральную горячую линию Минпросвещения РФ: <strong>8 (800) 200-91-85</strong>.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer-component"></div>
+
+    <!-- Так как файл лежит в папке /food/, путь к общему скрипту должен подняться на уровень выше -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

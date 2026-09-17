@@ -1,0 +1,358 @@
+﻿/* ==========================================================================
+   1. СБРОС СТИЛЕЙ И БАЗОВЫЕ НАСТРОЙКИ
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #003d82;
+    text-decoration: underline;
+}
+
+/* Кнопки */
+.btn, .btn-alt {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.btn:hover {
+    background-color: #003d82;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-alt {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.btn-alt:hover {
+    background-color: #dee2e6;
+}
+
+/* ==========================================================================
+   2. ШАПКА И НАВИГАЦИЯ (HEADER & NAV)
+   ========================================================================== */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo-link strong {
+    display: block;
+    font-size: 1.25rem;
+    color: #002b5c;
+}
+
+.logo-link span {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Главное меню */
+.site-nav {
+    background-color: #002b5c;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+
+.menu-list > li {
+    position: relative;
+}
+
+.menu-list > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.menu-list > li > a:hover {
+    background-color: #003d82;
+    text-decoration: none;
+}
+
+/* Выпадающее меню (Сведения об ОО) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    list-style: none;
+    border: 1px solid #dee2e6;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #333333;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ==========================================================================
+   3. ГЛАВНЫЙ КОНТЕНТ (основная разметка)
+   ========================================================================== */
+.main-content {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #0056b3;
+}
+
+.hero-section h1 {
+    color: #002b5c;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+/* Двухколоночный Grid (Объявления и Виджет) */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.card h3 {
+    color: #c92a2a;
+    margin-bottom: 10px;
+}
+
+.pos-widget-mock {
+    background-color: #f1f3f5;
+    border: 2px dashed #ced4da;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.pos-widget-mock p {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Новости */
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.news-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+}
+
+.news-card .date {
+    font-size: 0.85rem;
+    color: #868e96;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.news-card h3 {
+    margin-bottom: 10px;
+    color: #002b5c;
+}
+
+/* ==========================================================================
+   4. ПОДВАЛ (FOOTER)
+   ========================================================================== */
+.site-footer {
+    background-color: #212529;
+    color: #ced4da;
+    padding: 40px 0;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links h4 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #adb5bd;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   5. АДАПТИВНОСТЬ (МОБИЛЬНАЯ ВЕРСИЯ)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .menu-list {
+        flex-direction: column;
+    }
+
+    .menu-list > li > a {
+        padding: 12px 20px;
+        border-bottom: 1px solid #003d82;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background-color: #001f42;
+    }
+
+    .dropdown-menu li a {
+        color: #bae6fd;
+        padding-left: 40px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   6. ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ (ПО ГОСТУ)
+   ========================================================================== */
+body.visual-impaired {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 22px !important; /* Увеличенный базовый шрифт */
+}
+
+body.visual-impaired * {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+}
+
+body.visual-impaired a {
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}
+
+body.visual-impaired a:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.visual-impaired .site-nav,
+body.visual-impaired .btn,
+body.visual-impaired .hero-section {
+    border: 3px solid #000000 !important;
+    padding: 20px !important;
+    margin-bottom: 15px !important;
+}
+
+body.visual-impaired img {
+    display: none !important; /* Отключение отвлекающих картинок */
+}
