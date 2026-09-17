@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МАОУ СОШ № 14 НГО — Официальный сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта (динамически загружается из js/components) -->
+    <div id="header-component"></div>
+
+    <!-- Главный контент страницы -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Баннерная зона / Приветствие -->
+            <section class="hero-section">
+                <h1>Добро пожаловать на официальный сайт МАОУ «СОШ № 14» НГО</h1>
+                <p>Муниципальное автономное общеобразовательное учреждение "Средняя общеобразовательная школа № 14" Находкинского городского округа</p>
+            </section>
+
+            <!-- Блок Госуслуг (ПОС) и Объявления -->
+            <section class="grid-container">
+                <div class="announcements">
+                    <h2>Важные объявления</h2>
+                    <div class="card">
+                        <h3>Внимание! Тестовый режим</h3>
+                        <p>Данная версия сайта находится на этапе наполнения и работает в тестовом режиме.</p>
+                    </div>
+                </div>
+                
+                <div class="gosuslugi-widget">
+                    <h2>Госуслуги. Решаем вместе</h2>
+                    <!-- Виджет ПОС -->
+                    <div class="pos-widget-mock">
+                        <p>Есть предложения или проблемы? Напишите нам.</p>
+                        <a href="https://gosuslugi.ru" target="_blank" class="btn">Написать о проблеме</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Лента новостей -->
+            <section class="news-section">
+                <h2>Новости и мероприятия</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <span class="date">17.09.2026</span>
+                        <h3>Запуск разработки нового сайта</h3>
+                        <p>Начались работы по созданию независимого и быстрого сайта школы на чистом коде HTML/CSS/JS.</p>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Подвал сайта (динамически загружается из js/components) -->
+    <div id="footer-component"></div>
+
+    <!-- Подключение главного управляющего скрипта -->
+    <script src="js/main.js"></script>
+</body>
+</html>

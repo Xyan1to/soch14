@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание звонков — МАОУ СОШ № 14 НГО</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Специфические стили для таблиц расписания */
+        .schedule-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #dee2e6;
+        }
+        .schedule-table th, .schedule-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .schedule-table th {
+            background-color: #002b5c;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .schedule-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        .lesson-num {
+            font-weight: 700;
+            color: #0056b3;
+            background-color: #e9f1f9;
+            width: 40px;
+        }
+        .break-info {
+            font-size: 0.85rem;
+            color: #6c757d;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .schedule-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта (динамически загружается из js/main.js) -->
+    <div id="header-component"></div>
+
+    <!-- Главный контент страницы -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs" style="margin-bottom: 20px; font-size: 0.9rem; color: #6c757d;">
+                <a href="index.html">Главная</a> — <span>Учащимся</span> — <strong>Расписание звонков</strong>
+            </nav>
+
+            <h1>Расписание звонков</h1>
+            <p style="margin-bottom: 30px; color: #6c757d;">Режим работы учебных смен МАОУ «СОШ № 14» НГО на текущий учебный год. Пожалуйста, планируйте время прибытия в школу заранее.</p>
+
+            <div class="schedule-container">
+                
+                <!-- ТАБЛИЦА: 1 СМЕНА -->
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <div style="background-color: #0056b3; color: white; padding: 15px 20px;">
+                        <h2 style="font-size: 1.3rem; margin: 0;">I смена (Стандартный режим)</h2>
+                        <p style="font-size: 0.85rem; margin: 5px 0 0 0; opacity: 0.9;">Начало занятий в 08:30</p>
+                    </div>
+                    
+                    <table class="schedule-table" style="border: none;">
+                        <thead>
+                            <tr>
+                                <th>Урок</th>
+                                <th>Время урока</th>
+                                <th>Перемена</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="lesson-num">1</td>
+                                <td><strong>08:30 – 09:15</strong></td>
+                                <td class="break-info">15 мин (завтрак 1–4 кл.)</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">2</td>
+                                <td><strong>09:30 – 10:15</strong></td>
+                                <td class="break-info">20 мин (завтрак 5–8 кл.)</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">3</td>
+                                <td><strong>10:35 – 11:20</strong></td>
+                                <td class="break-info">20 мин (завтрак 9–11 кл.)</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">4</td>
+                                <td><strong>11:40 – 12:25</strong></td>
+                                <td class="break-info">15 мин (обед ГПД)</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">5</td>
+                                <td><strong>12:40 – 13:25</strong></td>
+                                <td class="break-info">10 мин</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">6</td>
+                                <td><strong>13:35 – 14:20</strong></td>
+                                <td class="break-info">10 мин</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">7</td>
+                                <td><strong>14:30 – 15:15</strong></td>
+                                <td class="break-info">Конец смены</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ТАБЛИЦА: 2 СМЕНА -->
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <div style="background-color: #495057; color: white; padding: 15px 20px;">
+                        <h2 style="font-size: 1.3rem; margin: 0;">II смена (Стандартный режим)</h2>
+                        <p style="font-size: 0.85rem; margin: 5px 0 0 0; opacity: 0.9;">Начало занятий в 14:00</p>
+                    </div>
+                    
+                    <table class="schedule-table" style="border: none;">
+                        <thead>
+                            <tr>
+                                <th>Урок</th>
+                                <th>Время урока</th>
+                                <th>Перемена</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="lesson-num">1</td>
+                                <td><strong>14:00 – 14:45</strong></td>
+                                <td class="break-info">15 мин</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">2</td>
+                                <td><strong>15:00 – 15:45</strong></td>
+                                <td class="break-info">15 min</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">3</td>
+                                <td><strong>16:00 – 16:45</strong></td>
+                                <td class="break-info">15 мин</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">4</td>
+                                <td><strong>17:00 – 17:45</strong></td>
+                                <td class="break-info">10 мин</td>
+                            </tr>
+                            <tr>
+                                <td class="lesson-num">5</td>
+                                <td><strong>17:55 – 18:40</strong></td>
+                                <td class="break-info">Конец смены</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- Информационное примечание -->
+            <div class="card" style="background-color: #f1f3f5; border-left: 5px solid #6c757d; margin-bottom: 30px;">
+                <h3>⚠️ Примечание для учащихся и родителей</h3>
+                <p style="margin-top: 10px; font-size: 0.95rem;">
+                    В дни проведения праздничных мероприятий, родительских собраний или в условиях неблагоприятных погодных условий Приморского края режим занятий и длительность перемен могут быть изменены по приказу директора школы. Обо всех изменениях классные руководители информируют заранее через систему «Сетевой Город. Образование».
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Подвал сайта (динамически загружается из js/main.js) -->
+    <div id="footer-component"></div>
+
+    <!-- Подключение главного управляющего скрипта -->
+    <script src="js/main.js"></script>
+</body>
+</html>

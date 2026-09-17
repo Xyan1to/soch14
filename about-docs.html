@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документы — МАОУ СОШ № 14 НГО</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Дополнительные стили для таблиц документов */
+        .doc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: #ffffff;
+        }
+        .doc-table th, .doc-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .doc-table th {
+            background-color: #f1f3f5;
+            color: #002b5c;
+            font-weight: 600;
+        }
+        .doc-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        .doc-link {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+        }
+        .doc-info {
+            font-size: 0.8rem;
+            color: #868e96;
+            margin-left: 8px;
+        }
+        .sign-badge {
+            display: inline-block;
+            background-color: #e6fcf5;
+            color: #0ca678;
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #96f2d7;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта (динамически загружается из js/main.js) -->
+    <div id="header-component"></div>
+
+    <!-- Главный контент страницы -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs" style="margin-bottom: 20px; font-size: 0.9rem; color: #6c757d;">
+                <a href="index.html">Главная</a> — <span>Сведения об ОО</span> — <strong>Документы</strong>
+            </nav>
+
+            <h1>Документы</h1>
+            <p style="margin-bottom: 30px; color: #6c757d;">В данном разделе размещены учредительные, нормативные и локальные акты МАОУ «СОШ № 14» НГО.</p>
+
+            <!-- БЛОК 1: Правоустанавливающие документы -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #002b5c; margin-bottom: 10px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">Основные правоустанавливающие документы</h2>
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Наименование документа</th>
+                            <th>Ссылка на файл</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Устав образовательной организации (с изменениями и дополнениями)</td>
+                            <td>
+                                <a href="documents/ustav.pdf" target="_blank" class="doc-link">📄 Открыть Устав</a>
+                                <span class="doc-info">(PDF, 2.4 МБ)</span>
+                                <br><span class="sign-badge">🔒 Подписано ЭП</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Лицензия на осуществление образовательной деятельности (с приложениями)</td>
+                            <td>
+                                <a href="documents/licenziya.pdf" target="_blank" class="doc-link">📄 Открыть Лицензию</a>
+                                <span class="doc-info">(PDF, 1.8 МБ)</span>
+                                <br><span class="sign-badge">🔒 Подписано ЭП</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Свидетельство о государственной аккредитации (с приложениями)</td>
+                            <td>
+                                <a href="documents/akkreditaciya.pdf" target="_blank" class="doc-link">📄 Открыть Свидетельство</a>
+                                <span class="doc-info">(PDF, 1.5 МБ)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- БЛОК 2: Локальные нормативные акты -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #002b5c; margin-bottom: 10px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">Локальные нормативные акты по основным вопросам</h2>
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Наименование документа</th>
+                            <th>Ссылка на файл</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Правила приема граждан на обучение в МАОУ «СОШ № 14» НГО</td>
+                            <td>
+                                <a href="documents/pravila-priema.pdf" target="_blank" class="doc-link">📄 Скачать документ</a>
+                                <span class="doc-info">(PDF, 450 КБ)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Режим занятий обучающихся</td>
+                            <td>
+                                <a href="documents/rezhim-zanyatij.pdf" target="_blank" class="doc-link">📄 Скачать документ</a>
+                                <span class="doc-info">(PDF, 320 КБ)</span>
+                                <br><span class="sign-badge">🔒 Подписано ЭП</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Формы, периодичность и порядок текущего контроля успеваемости и промежуточной аттестации обучающихся</td>
+                            <td>
+                                <a href="documents/poryadok-attestacii.pdf" target="_blank" class="doc-link">📄 Скачать документ</a>
+                                <span class="doc-info">(PDF, 680 КБ)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Порядок и основания перевода, отчисления и восстановления обучающихся</td>
+                            <td>
+                                <a href="documents/perevod-i-otchislenie.pdf" target="_blank" class="doc-link">📄 Скачать документ</a>
+                                <span class="doc-info">(PDF, 510 КБ)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Правила внутреннего распорядка обучающихся</td>
+                            <td>
+                                <a href="documents/rasporyadok-obuchayushchihsya.pdf" target="_blank" class="doc-link">📄 Скачать документ</a>
+                                <span class="doc-info">(PDF, 400 КБ)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Правила внутреннего трудового распорядка коллектива</td>
+                            <td>
+                                <a href="documents/trudovoj-rasporyadok.pdf" target="_blank" class="doc-link">📄 Скачать документ</a>
+                                <span class="doc-info">(PDF, 850 КБ)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Коллективный договор</td>
+                            <td>
+                                <a href="documents/kollektivnyj-dogovor.pdf" target="_blank" class="doc-link">📄 Скачать документ</a>
+                                <span class="doc-info">(PDF, 1.2 МБ)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- БЛОК 3: Отчеты и предписания -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #002b5c; margin-bottom: 10px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">Отчеты и результаты проверок</h2>
+                <table class="doc-table">
+                    <tbody>
+                        <tr>
+                            <td style="width: 65%;">Отчет о результатах самообследования за прошедший календарный год</td>
+                            <td>
+                                <a href="documents/samoobsledovanie.pdf" target="_blank" class="doc-link">📄 Открыть отчет</a>
+                                <span class="doc-info">(PDF, 1.1 МБ)</span>
+                                <br><span class="sign-badge">🔒 Подписано ЭП</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Предписания органов, осуществляющих государственный контроль (надзор) в сфере образования, и отчеты об исполнении</td>
+                            <td>
+                                <span style="color: #6c757d; font-style: italic;">Предписания отсутствуют / Все предписания исполнены.</span>
+                                <br><a href="documents/otchet-predpisaniya.pdf" style="font-size: 0.9rem; margin-top: 5px; display:inline-block;">📄 Посмотреть архив документов контроля</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Подвал сайта (динамически загружается из js/main.js) -->
+    <div id="footer-component"></div>
+
+    <!-- Подключение главного управляющего скрипта -->
+    <script src="js/main.js"></script>
+</body>
+</html>

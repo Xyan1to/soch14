@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — МАОУ СОШ № 14 НГО</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Дополнительные стили для страницы контактов */
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .contact-info-list {
+            list-style: none;
+        }
+        .contact-info-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .contact-info-list li::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.1rem;
+        }
+        .icon-geo::before { content: "📍"; }
+        .icon-phone::before { content: "📞"; }
+        .icon-email::before { content: "✉️"; }
+        .icon-time::before { content: "⏰"; }
+
+        /* Стили формы обратной связи */
+        .feedback-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #002b5c;
+        }
+        .form-control {
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #0056b3;
+            box-shadow: 0 0 0 3px rgba(0,86,179,0.1);
+        }
+        .map-container {
+            margin-top: 30px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #dee2e6;
+            height: 400px;
+        }
+        @media (max-width: 768px) {
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта (динамически загружается из js/main.js) -->
+    <div id="header-component"></div>
+
+    <!-- Главный контент страницы -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs" style="margin-bottom: 20px; font-size: 0.9rem; color: #6c757d;">
+                <a href="index.html">Главная</a> — <strong>Контакты</strong>
+            </nav>
+
+            <h1>Контакты и обратная связь</h1>
+            <p style="margin-bottom: 30px; color: #6c757d;">Вы можете связаться с администрацией школы по телефонам, электронной почте или отправить официальное обращение через форму обратной связи.</p>
+
+            <div class="contacts-grid">
+                
+                <!-- Левая колонка: Контактная информация -->
+                <div class="card">
+                    <h2 style="color: #002b5c; margin-bottom: 20px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">МАОУ «СОШ № 14» НГО</h2>
+                    
+                    <ul class="contact-info-list">
+                        <li class="icon-geo">
+                            <strong>Адрес школы:</strong><br>
+                            692909, Приморский край, г. Находка, ул. Пограничная, д. 40
+                        </li>
+                        <li class="icon-phone">
+                            <strong>Телефоны администрации:</strong><br>
+                            Приемная директора: +7 (4236) 6X-XX-XX<br>
+                            Бухгалтерия: +7 (4236) 6X-XX-XX
+                        </li>
+                        <li class="icon-email">
+                            <strong>Электронная почта:</strong><br>
+                            <a href="mailto:sosh14nakhodka@vladivostok.ru">sosh14nakhodka@vladivostok.ru</a>
+                        </li>
+                        <li class="icon-time">
+                            <strong>Время работы приемной:</strong><br>
+                            Понедельник — Пятница: с 09:00 до 17:00<br>
+                            Перерыв: с 13:00 до 14:00
+                        </li>
+                    </ul>
+
+                    <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #dee2e6; font-size: 0.9rem;">
+                        <h4 style="color: #c92a2a; margin-bottom: 5px;">Вышестоящая организация:</h4>
+                        <p>Управление образования администрации Находкинского городского округа</p>
+                        <p>Сайт: <a href="https://nakhodka-edu.ru" target="_blank">nakhodka-edu.ru</a></p>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: Форма обратной связи (Электронная приемная) -->
+                <div class="card">
+                    <h2 style="color: #002b5c; margin-bottom: 20px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">Электронная приемная</h2>
+                    
+                    <!-- На чистом HTML форма отправляет данные методом POST. 
+                         Для работы на хостинге в action нужно будет указать путь к PHP-скрипту отправки (например, mail.php) -->
+                    <form class="feedback-form" action="mail.php" method="POST">
+                        <div class="form-group">
+                            <label for="fio">Ваше ФИО (полностью) *</label>
+                            <input type="text" id="fio" name="fio" class="form-control" placeholder="Иванов Иван Иванович" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Ваш E-mail для ответа *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="example@mail.ru" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="theme">Тема обращения</label>
+                            <select id="theme" name="theme" class="form-control">
+                                <option value="general">Общие вопросы</option>
+                                <option value="admission">Прием в школу</option>
+                                <option value="food">Организация питания</option>
+                                <option value="tech">Работа сайта</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Текст сообщения *</label>
+                            <textarea id="message" name="message" rows="5" class="form-control" placeholder="Введите ваше обращение..." required></textarea>
+                        </div>
+
+                        <div style="font-size: 0.8rem; color: #6c757d; margin-bottom: 5px;">
+                            Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных в соответствии с ФЗ № 152.
+                        </div>
+
+                        <button type="submit" class="btn">Отправить обращение</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Интерактивная карта (Яндекс.Карты) -->
+            <div class="map-container">
+                <!-- Конструктор карт Яндекс. Координаты установлены приблизительно для Находки, ул. Пограничная 40. 
+                     Вы можете заменить этот iframe кодом из официального конструктора Яндекс.Карт для вашей школы. -->
+               <iframe src="https://yandex.ru" width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative; border:0;"></iframe>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Подвал сайта (динамически загружается из js/main.js) -->
+    <div id="footer-component"></div>
+
+    <!-- Подключение главного управляющего скрипта -->
+    <script src="js/main.js"></script>
+</body>
+</html>

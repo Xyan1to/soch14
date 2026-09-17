@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Родителям — МАОУ СОШ № 14 НГО</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Дополнительные стили для списков и памяток */
+        .info-list {
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        .info-list li {
+            margin-bottom: 8px;
+        }
+        .alert-box {
+            background-color: #fff5f5;
+            border-left: 5px solid #ffc9c9;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта (динамически загружается из js/main.js) -->
+    <div id="header-component"></div>
+
+    <!-- Главный контент страницы -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs" style="margin-bottom: 20px; font-size: 0.9rem; color: #6c757d;">
+                <a href="index.html">Главная</a> — <span>Родителям</span> — <strong>Полезная информация</strong>
+            </nav>
+
+            <h1>Информация для родителей</h1>
+            <p style="margin-bottom: 30px; color: #6c757d;">Актуальные материалы по приему в школу, консультациям специалистов и психолого-педагогическому сопровождению учащихся МАОУ «СОШ № 14» НГО.</p>
+
+            <!-- БЛОК 1: Прием в школу -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #002b5c; margin-bottom: 15px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">Прием в 1-й класс</h2>
+                <p>Запись детей в первый класс на будущий учебный год начинается <strong>1 апреля</strong> для семей, проживающих на закрепленной за школой территории, а также для имеющих первоочередное право приема.</p>
+                
+                <h4 style="margin-top: 15px; color: #002b5c;">Необходимые документы:</h4>
+                <ul class="info-list">
+                    <li>Паспорт родителя (законного представителя).</li>
+                    <li>Свидетельство о рождении ребенка (+ копия).</li>
+                    <li>Свидетельство о регистрации ребенка по месту жительства (Форма № 8).</li>
+                </ul>
+                <p>Подать заявление можно лично в школе или дистанционно через портал <a href="https://gosuslugi.ru" target="_blank">Госуслуги</a>.</p>
+            </div>
+
+            <!-- БЛОК 2: Служба сопровождения и психолог -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #002b5c; margin-bottom: 15px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">График работы педагога-психолога</h2>
+                <p>В нашей школе работает квалифицированный педагог-психолог. Родители могут обратиться за индивидуальной консультацией по вопросам адаптации, успеваемости и эмоционального состояния ребенка.</p>
+                
+                <h4 style="margin-top: 15px; color: #002b5c;">Часы консультаций для родителей:</h4>
+                <ul class="info-list">
+                    <li><strong>Вторник:</strong> 15:00 — 17:00</li>
+                    <li><strong>Четверг:</strong> 09:00 — 12:00</li>
+                </ul>
+                <p>Запись на консультацию осуществляется через классного руководителя.</p>
+
+                <div class="alert-box">
+                    <strong style="color: #c92a2a;">📞 Службы экстренной психологической помощи:</strong>
+                    <p style="margin-top: 5px; font-size: 0.95rem;">Единый всероссийский детский телефон доверия (бесплатно и анонимно): <strong>8-800-2000-122</strong></p>
+                </div>
+            </div>
+
+            <!-- БЛОК 3: Важные памятки -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h2 style="color: #002b5c; margin-bottom: 15px; border-bottom: 2px solid #0056b3; padding-bottom: 5px;">Безопасность и профилактика</h2>
+                <p>Рекомендуем ознакомиться с важными материалами по обеспечению безопасности детей в быту, на дорогах и в сети Интернет:</p>
+                <ul class="info-list">
+                    <li><a href="documents/pamyatka-pdd.pdf" target="_blank">📄 Памятка по правилам дорожного движения (ПДД)</a> <span style="font-size: 0.8rem; color: #868e96;">(PDF, 350 КБ)</span></li>
+                    <li><a href="documents/pamyatka-internet.pdf" target="_blank">📄 Безопасный интернет: советы для родителей и детей</a> <span style="font-size: 0.8rem; color: #868e96;">(PDF, 420 КБ)</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Подвал сайта (динамически загружается из js/main.js) -->
+    <div id="footer-component"></div>
+
+    <!-- Подключение главного управляющего скрипта -->
+    <script src="js/main.js"></script>
+</body>
+</html>
